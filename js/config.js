@@ -284,9 +284,9 @@ window.PORTFOLIO = {
         note: "Kismet means fate. The song is set in the season a relationship begins to come apart, and it answers fate with a request: hold on. Autumn leaves are both the clock and the promise — everything is falling, and still the singer asks to be held."
       }
     },
-    { title: "Untitled", note: "Third recording — to be added", file: "music/03.mp3" },
-    { title: "Untitled", note: "Fourth recording — to be added", file: "music/04.mp3" },
-    { title: "Untitled", note: "Fifth recording — to be added", file: "music/05.mp3" }
+    { title: "Untitled", note: "Third recording — to be added", file: "music/03.mp3", hidden: true },
+    { title: "Untitled", note: "Fourth recording — to be added", file: "music/04.mp3", hidden: true },
+    { title: "Untitled", note: "Fifth recording — to be added", file: "music/05.mp3", hidden: true }
   ],
 
   /* ---------- 02 Works · three performance films ------------------------

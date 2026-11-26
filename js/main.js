@@ -8,7 +8,9 @@
 
   var CFG = window.PORTFOLIO || {};
   var SITE = CFG.site || {};
-  var TRACKS = Array.isArray(CFG.tracks) ? CFG.tracks.slice(0, 5) : [];
+  var TRACKS = (Array.isArray(CFG.tracks) ? CFG.tracks : [])
+    .filter(function (track) { return !track.hidden; })
+    .slice(0, 5);
   var PHOTOS = Array.isArray(CFG.photos) ? CFG.photos.slice(0, 5) : [];
   var EXPERIENCE = Array.isArray(CFG.experience) ? CFG.experience : [];
   var PRINCIPLES = Array.isArray(CFG.principles) ? CFG.principles : [];
@@ -112,6 +114,8 @@
       var emailSpan = emailEl.querySelector("span");
       if (emailSpan) emailSpan.textContent = SITE.emailDisplay || SITE.email;
     }
+    var emailLink = $("#contactEmailLink");
+    if (emailLink && SITE.email) emailLink.href = "mailto:" + SITE.email;
     if (SITE.location) $("#contactLocation").textContent = SITE.location;
     var heroLegal = $("#heroLegalName");
     if (heroLegal && artistName) heroLegal.textContent = artistName;
@@ -120,6 +124,7 @@
     var navEmail = $("#navEmail");
     if (navEmail && SITE.email) {
       navEmail.textContent = SITE.emailDisplay || SITE.email;
+      navEmail.href = "mailto:" + SITE.email;
     }
 
     if (document.title && SITE.name) {

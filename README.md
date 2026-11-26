@@ -48,7 +48,7 @@ Then open http://localhost:8000.
 
 ## 1. Recordings
 
-Two tracks are already connected: **Goodnight** (`01.m4a`) and **Kismet** (`02.mp3`). Three slots remain open. Put the remaining audio in **`music/`**:
+Two tracks are already connected: **Goodnight** (`01.m4a`) and **Kismet** (`02.mp3`). Three slots are deliberately hidden for now. Put the remaining audio in **`music/`**:
 
 ```
 music/01.mp3
@@ -58,7 +58,7 @@ music/04.mp3
 music/05.mp3
 ```
 
-Refresh the page. Each track row will pick up its duration and the “tracks still to be added” notice will disappear. The site also tries `1.mp3`, `track1.mp3`, `track-01.mp3` and similar names.
+Refresh the page. Each track row will pick up its duration and the “tracks still to be added” notice will disappear. To show one of the hidden slots, remove its `hidden: true` flag in `js/config.js`. The site also tries `1.mp3`, `track1.mp3`, `track-01.mp3` and similar names.
 
 If your filenames are different, edit the matching `file` in `js/config.js`. MP3 at 128–320 kbps is recommended.
 

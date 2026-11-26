@@ -1521,6 +1521,9 @@ body.has-player { padding-bottom: 110px; }
   color: var(--ink-faint);
 }
 .gallery__hint span { color: var(--accent); font-size: 12px; }
+.gallery__hint .gallery__hint-desktop,
+.gallery__hint .gallery__hint-mobile { color: var(--ink-faint); font-size: 9px; }
+.gallery__hint .gallery__hint-mobile { display: none; }
 
 /* ---------- Lightbox ---------- */
 .lightbox {
@@ -2026,6 +2029,14 @@ body.has-player { padding-bottom: 110px; }
   .scroll-cue { display: none; }
   .player__art { display: none; }
   .player__inner { grid-template-columns: minmax(0, 1fr) auto; }
+}
+
+/* Very small phones: let the band label drop below the logo. */
+@media (max-width: 360px) {
+  .band-grid,
+  .band { min-width: 0; }
+  .band__top { flex-wrap: wrap; row-gap: 10px; }
+  .band__tag { flex: 1 1 100%; min-width: 0; }
 }
 
 /* ---------- Motion preferences ---------- */
@@ -4092,6 +4103,8 @@ a.recognition-card:hover {
 .contact__email { cursor: default; }
 .contact__email:hover { color: var(--ink); border-color: var(--line); }
 .contact__email span { overflow-wrap: anywhere; }
+.contact__email a { color: inherit; cursor: pointer; }
+.contact__email a:hover span { border-bottom: 1px solid currentColor; }
 .nav__foot .nav__email {
   font-family: var(--serif);
   font-size: 18px;
@@ -4309,3 +4322,71 @@ a.recognition-card:hover {
   margin-top: 28px;
 }
 .case-links .case-link { margin-top: 0; }
+
+/* ==========================================================================
+   Mobile composition pass
+   Keeps the desktop editorial layout intact, but stops the phone view from
+   feeling like the desktop page scaled down.
+   ========================================================================== */
+@media (max-width: 720px) {
+  /* Slightly calmer display scale so the copy gets more of the screen. */
+  .section__title { font-size: clamp(2rem, 8.8vw, 2.6rem); }
+  .about-home__title {
+    font-size: clamp(2.5rem, 10.5vw, 3.2rem);
+    line-height: 0.94;
+  }
+  .about-home__sub { font-size: clamp(1.15rem, 4.6vw, 1.4rem); }
+  .about-home__portrait { aspect-ratio: 1 / 1; max-width: 100%; }
+  .management__statement { font-size: clamp(1.6rem, 6.8vw, 2rem); }
+  .contact__title { font-size: clamp(2.7rem, 11.5vw, 3.6rem); }
+
+  /* Experience photos become a swipeable strip instead of three tall blocks. */
+  .xp-photo-strip {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 0 var(--gutter) 4px;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .xp-photo-strip::-webkit-scrollbar { display: none; }
+  .xp-photo {
+    flex: 0 0 82%;
+    scroll-snap-align: start;
+  }
+  .xp-photo figcaption { font-size: 8.5px; }
+
+  /* Gallery becomes one focused card at a time, with the next card peeking. */
+  .gallery__grid {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    margin-inline: calc(var(--gutter) * -1);
+    padding: 0 var(--gutter) 4px;
+    scroll-padding-inline: var(--gutter);
+    scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .gallery__grid::-webkit-scrollbar { display: none; }
+  .gallery__item:nth-child(n) {
+    flex: 0 0 82%;
+    width: auto;
+    margin-top: 0;
+    grid-column: auto;
+    grid-row: auto;
+    justify-self: auto;
+    scroll-snap-align: start;
+  }
+  .gallery__item:nth-child(n) .gallery__media { aspect-ratio: 4 / 5; }
+  .gallery__item:nth-child(n) .gallery__caption { min-height: 58px; }
+  .gallery__caption-en { font-size: 1rem; }
+  .gallery__plus { opacity: 1; transform: none; }
+  .gallery__hint .gallery__hint-desktop { display: none; }
+  .gallery__hint .gallery__hint-mobile { display: inline; }
+}

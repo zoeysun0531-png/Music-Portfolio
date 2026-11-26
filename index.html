@@ -44,7 +44,6 @@
   <!-- Header -->
   <header class="site-header" id="siteHeader">
     <a class="brand" href="#top" aria-label="SANYI SUN (Zoe Sun), back to top">
-      <span class="brand__mark">SS</span>
       <span class="brand__name">SANYI SUN <sup>Zoe Sun</sup></span>
     </a>
 
@@ -56,7 +55,7 @@
       <a href="#contact" class="nav__link"><span>Contact</span></a>
       <div class="nav__foot">
         <span>Kunshan, China — Grade 12</span>
-        <span id="navEmail" class="nav__email">zoeysun0531@gmail.com</span>
+        <a id="navEmail" class="nav__email" href="mailto:zoeysun0531@gmail.com">zoeysun0531@gmail.com</a>
       </div>
     </nav>
 
@@ -333,7 +332,9 @@
           </div>
           <div class="gallery__grid" id="galleryGrid"></div>
           <p class="gallery__hint" data-reveal>
-            <span aria-hidden="true">↗</span> Click to enlarge
+            <span aria-hidden="true">↗</span>
+            <span class="gallery__hint-desktop">Click to enlarge</span>
+            <span class="gallery__hint-mobile">Swipe · tap to enlarge</span>
           </p>
         </div>
       </div>
@@ -379,7 +380,7 @@
 
           <div class="contact__links" data-reveal>
             <div class="contact__email" id="contactEmail">
-              <span>zoeysun0531@gmail.com</span>
+              <a id="contactEmailLink" href="mailto:zoeysun0531@gmail.com"><span>zoeysun0531@gmail.com</span></a>
             </div>
             <div class="contact__copy-row">
               <button class="contact__copy" id="copyEmail" type="button" aria-label="Copy email address">
