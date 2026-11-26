@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SANYI SUN (Zoe Sun) — Music Portfolio</title>
+  <meta name="description" content="The music portfolio of SANYI SUN (Zoe Sun) — performance, production, and arts management. Recordings, performance films, experience and credentials." />
+  <meta name="author" content="SANYI SUN (Zoe Sun)" />
+  <meta name="theme-color" content="#0a0a0b" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SANYI SUN (Zoe Sun) — Music Portfolio" />
+  <meta property="og:description" content="Performance, production, and the space between. A music portfolio by SANYI SUN (Zoe Sun)." />
+  <meta property="og:image" content="image/photo-01.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Archivo:wght@300;400;500;600&family=IBM+Plex+Mono:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body id="top">
+
+  <a class="skip-link" href="#experience">Skip to experience</a>
+
+  <!-- Loading veil -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__inner">
+      <p class="loader__name">Zoe <em>Sun</em></p>
+      <p class="loader__sub">Music Portfolio</p>
+      <div class="loader__bar"><i></i></div>
+    </div>
+  </div>
+  <noscript>
+    <style>.loader{display:none}</style>
+  </noscript>
+
+  <div class="scroll-progress" aria-hidden="true"><span id="scrollProgress"></span></div>
+
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Header -->
+  <header class="site-header" id="siteHeader">
+    <a class="brand" href="#top" aria-label="SANYI SUN (Zoe Sun), back to top">
+      <span class="brand__mark">SS</span>
+      <span class="brand__name">SANYI SUN <sup>Zoe Sun</sup></span>
+    </a>
+
+    <nav class="nav" id="primaryNav" aria-label="Main">
+      <a href="#about" class="nav__link"><span>About SANYI SUN</span></a>
+      <a href="#experience" class="nav__link"><span>Experience</span></a>
+      <a href="#works" class="nav__link"><span>Works</span></a>
+      <a href="#academics" class="nav__link"><span>Achievements</span></a>
+      <a href="#contact" class="nav__link"><span>Contact</span></a>
+      <div class="nav__foot">
+        <span>Kunshan, China — Grade 12</span>
+        <span id="navEmail" class="nav__email">zoeysun0531@gmail.com</span>
+      </div>
+    </nav>
+
+    <a class="header-cta" href="#contact">
+      <span>Say hello</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="primaryNav">
+      <span></span><span></span>
+      <span class="sr-only">Menu</span>
+    </button>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" aria-label="Introduction">
+      <div class="hero__glow" id="heroGlow" aria-hidden="true"></div>
+      <div class="hero__ring" aria-hidden="true"></div>
+      <canvas class="hero__canvas" id="heroCanvas" aria-hidden="true"></canvas>
+
+      <div class="hero__inner container">
+        <p class="hero__eyebrow" data-reveal>
+          <span class="hero__eyebrow-line" aria-hidden="true"></span>
+          <span class="hero__eyebrow-text" id="heroEyebrow">KCISEC · Kunshan, CN · Grade 12</span>
+        </p>
+
+        <h1 class="hero__title">
+          <span class="hero__title-mask"><span class="hero__first">SANYI</span></span>
+          <span class="hero__title-mask"><span class="hero__last">SUN</span></span>
+        </h1>
+
+        <span class="hero__sticker" aria-hidden="true">
+          <b>SS—001</b>
+          <span>Music Portfolio<br />2026 / 27</span>
+        </span>
+
+        <div class="hero__meta" data-reveal>
+          <div class="hero__tagline-wrap">
+            <p class="hero__tagline" id="heroTagline">
+              A musician learning to build the stage, not just stand on it.
+            </p>
+
+            <ul class="hero__roles">
+              <li>Guitar</li>
+              <li>Performance</li>
+              <li>Production</li>
+              <li>Management</li>
+            </ul>
+          </div>
+
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#experience">
+              <span class="btn__eq" aria-hidden="true"><i></i><i></i><i></i></span>
+              Explore experience
+            </a>
+            <a class="btn btn--ghost" href="#works">
+              View works
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6" /></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <p class="hero__side" aria-hidden="true">Music Portfolio — 2026 / 27</p>
+
+      <div class="hero__foot container">
+        <p class="hero__school" data-reveal>
+          <span class="hero__school-en">SANYI SUN</span>
+          <span class="hero__legal" id="heroLegalName">Zoe Sun</span>
+        </p>
+        <a class="scroll-cue" href="#experience" data-reveal>
+          <span>Scroll</span>
+          <i></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- Marquee -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>SANYI SUN</span><i>◆</i><span>Music Portfolio</span><i>◆</i><span>Performance</span><i>◆</i><span>Production</span><i>◆</i><span>Management</span><i>◆</i><span>Kunshan, CN</span><i>◆</i><span>2026 / 27</span><i>◆</i>
+        <span>SANYI SUN</span><i>◆</i><span>Music Portfolio</span><i>◆</i><span>Performance</span><i>◆</i><span>Production</span><i>◆</i><span>Management</span><i>◆</i><span>Kunshan, CN</span><i>◆</i><span>2026 / 27</span><i>◆</i>
+      </div>
+    </div>
+
+    <!-- About SANYI SUN -->
+    <section class="section about-home" id="about">
+      <div class="container">
+        <div class="about-home__grid">
+          <figure class="about-home__portrait" data-reveal>
+            <img src="image/zoe-uniform.jpg" alt="Portrait of SANYI SUN in school uniform against a blue studio backdrop" loading="lazy" />
+            <figcaption>Kunshan, China · 2026</figcaption>
+          </figure>
+
+          <div class="about-home__content">
+            <p class="section__kicker" data-reveal><span>(About)</span> About SANYI SUN</p>
+            <h2 class="about-home__title" data-reveal>I don’t just<br />play the night.<br /><em>I build it.</em></h2>
+
+            <ul class="about-home__tags" data-reveal aria-label="Roles">
+              <li>Producer</li>
+              <li>Guitarist</li>
+              <li>Manager</li>
+              <li>Operator</li>
+              <li>Interns</li>
+            </ul>
+
+            <p class="about-home__sub" data-reveal>A producer’s ear. A manager’s plan. A guitarist’s timing. A builder’s instinct.</p>
+            <p class="about-home__proof" data-reveal>KC Voice · 800+ audience &nbsp;—&nbsp; 70%Soul · 2026 champions &nbsp;—&nbsp; Starry Heart · Wenqi Home</p>
+
+            <div class="about-home__actions" data-reveal>
+              <a class="btn btn--ghost" href="#works">View work <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h13M13 6l6 6-6 6"/></svg></a>
+              <p class="about-home__note">Zoe Sun is the artist name of SANYI SUN.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 01 · Experience -->
+    <section class="section experience theme-paper" id="experience">
+      <div class="container">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="section__kicker" data-reveal><span>(01)</span> Experience</p>
+            <h2 class="section__title" data-reveal>
+              Every stage has<br />
+              a <em>backstage</em>.
+            </h2>
+          </div>
+          <p class="section__intro" data-reveal>
+            From the stage to the wings: my work is not only playing, but planning, coordinating and making a show visible.
+          </p>
+        </div>
+
+        <div class="xp-photo-strip" data-reveal>
+          <figure class="xp-photo">
+            <a href="image/photo-04.jpg" target="_blank" rel="noopener"><img src="image/photo-04.jpg" alt="Zoe Sun with Joyce at Jazz at Lincoln Center Shanghai" loading="lazy" /></a>
+            <figcaption>Jazz at Lincoln Center Shanghai — with Joyce after a performance.</figcaption>
+          </figure>
+          <figure class="xp-photo">
+            <a href="image/photo-03.jpg" target="_blank" rel="noopener"><img src="image/photo-03.jpg" alt="The sound and lighting desk at KC Voice 2026" loading="lazy" /></a>
+            <figcaption>KC Voice 2026 — running sound, light and visuals from the tech desk.</figcaption>
+          </figure>
+          <figure class="xp-photo">
+            <a href="image/case-sc-group.jpg" target="_blank" rel="noopener"><img src="image/case-sc-group.jpg" alt="The KCISEC student council group on the school staircase" loading="lazy" /></a>
+            <figcaption>KCISEC Student Council — the activities and leadership team, 2025–26.</figcaption>
+          </figure>
+        </div>
+
+        <div class="xp-layout">
+          <aside class="xp-aside" data-reveal>
+            <p class="xp-aside__label">How I work</p>
+            <p class="xp-aside__quote">
+              Playing taught me to understand the work.<br />
+              Organizing taught me to understand <em>people</em>.
+            </p>
+            <ul class="principles" id="principlesList"></ul>
+          </aside>
+
+          <div class="xp-timeline" id="experienceList"></div>
+        </div>
+
+        <figure class="feature" data-reveal>
+          <p class="feature__label" id="featureLabel"></p>
+          <blockquote class="feature__quote" id="featureQuote"></blockquote>
+          <figcaption class="feature__meta">
+            <span id="featureCredit"></span>
+            <span id="featureNote"></span>
+          </figcaption>
+          <a class="feature__link" id="featureLink" href="#" target="_blank" rel="noopener" hidden></a>
+        </figure>
+
+      </div>
+    </section>
+
+    <!-- 02 · Works -->
+    <section class="section works" id="works">
+      <div class="container">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="section__kicker" data-reveal><span>(02)</span> Works</p>
+            <h2 class="section__title" data-reveal>
+              Made to be<br />
+              <em>heard</em>.
+            </h2>
+          </div>
+          <p class="section__intro" data-reveal>
+            Recordings, performance and field films, and how I think about music and management. Headphones on.
+          </p>
+        </div>
+
+        <!-- Recordings -->
+        <div class="work-block work-block--first">
+          <div class="subhead" data-reveal>
+            <p class="subhead__title">Recordings</p>
+            <p class="subhead__label"><span>01</span> Listen</p>
+          </div>
+
+          <ol class="tracks" id="trackList">
+            <noscript><li class="tracks__fallback">Please enable JavaScript to listen.</li></noscript>
+          </ol>
+
+          <p class="audio-notice" id="audioNotice" hidden>
+            <span class="audio-notice__dot" aria-hidden="true"></span>
+            <span id="audioNoticeText">Some tracks are still to be added.</span>
+          </p>
+
+          <div class="music__foot" data-reveal>
+            <p>
+              <span class="music__foot-label">Headphones recommended.</span>
+              Start low, then turn it up.
+            </p>
+            <p class="music__foot-quote">“First listen, then play.”</p>
+          </div>
+        </div>
+
+        <!-- Performance films -->
+        <div class="work-block">
+          <div class="subhead" data-reveal>
+            <p class="subhead__title">Performance &amp; field films</p>
+            <p class="subhead__label"><span>02</span> Watch</p>
+          </div>
+
+          <div class="films" id="filmGrid"></div>
+
+          <p class="media-hint" data-reveal>
+            <span aria-hidden="true">▶</span> Click a film to watch
+          </p>
+        </div>
+
+        <!-- Music × Management -->
+        <div class="management">
+          <p class="section__kicker" data-reveal>Music × Management</p>
+          <h3 class="management__statement" id="mgmtStatement" data-reveal></h3>
+          <p class="management__sub" id="mgmtSub" data-reveal></p>
+
+          <div class="management__grid">
+            <div class="management__body" id="mgmtBody" data-reveal></div>
+            <ul class="pillars" id="pillarList" data-reveal></ul>
+          </div>
+        </div>
+
+        <!-- Case files -->
+        <div class="case-files" id="caseFiles">
+          <div class="subhead" data-reveal>
+            <p class="subhead__title">Case files</p>
+            <p class="subhead__label"><span>03</span> Selected documents</p>
+          </div>
+          <p class="case-files__intro" data-reveal>
+            Four projects, four sets of working documents: how a night was built, how a venture was pitched, how a sensitive project was structured, and how a school year was run.
+          </p>
+          <div class="case-grid" id="caseGrid"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience continued · bands and backstage photos -->
+    <section class="section experience-continued theme-paper" id="experience-continued" data-spy="#experience" aria-label="Experience continued">
+      <div class="container">
+
+        <div class="bands" id="bands">
+          <div class="subhead" data-reveal>
+            <p class="subhead__title">Bands</p>
+            <p class="subhead__label">Before the stage</p>
+          </div>
+          <div class="band-grid" id="bandGrid"></div>
+        </div>
+
+        <div class="experience__gallery">
+          <div class="subhead" data-reveal>
+            <p class="subhead__title">On stage &amp; backstage</p>
+            <p class="subhead__label">Documented moments</p>
+          </div>
+          <div class="gallery__grid" id="galleryGrid"></div>
+          <p class="gallery__hint" data-reveal>
+            <span aria-hidden="true">↗</span> Click to enlarge
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 03 · Academics -->
+    <section class="section academics theme-paper" id="academics">
+      <div class="container">
+        <div class="section__head section__head--split">
+          <div>
+            <p class="section__kicker" data-reveal><span>(03)</span> Achievements</p>
+            <h2 class="section__title" data-reveal>
+              Discipline, on<br />
+              and off the <em>stage</em>.
+            </h2>
+          </div>
+          <p class="section__intro" data-reveal>
+            Three credentials — language, finance, and advanced coursework.
+          </p>
+        </div>
+
+        <div class="recognition-grid" id="recognitionGrid"></div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <p class="section__kicker" data-reveal><span>(04)</span> Contact</p>
+        <h2 class="contact__title" data-reveal>
+          Let’s make<br />
+          <em>it happen.</em>
+        </h2>
+
+        <div class="contact__grid">
+          <div class="contact__body" data-reveal>
+            <p>
+              If you want to talk music management, concert programming, or hear a song that isn’t out yet —
+              write to me. I’m looking for internships, collaborations, and any chance to bring good music to more people.
+            </p>
+            <p class="contact__note">For internships, collaborations, or a conversation about music.</p>
+          </div>
+
+          <div class="contact__links" data-reveal>
+            <div class="contact__email" id="contactEmail">
+              <span>zoeysun0531@gmail.com</span>
+            </div>
+            <div class="contact__copy-row">
+              <button class="contact__copy" id="copyEmail" type="button" aria-label="Copy email address">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="1.5"/><path d="M15 9V6.5A1.5 1.5 0 0 0 13.5 5h-7A1.5 1.5 0 0 0 5 6.5v7A1.5 1.5 0 0 0 6.5 15H9"/></svg>
+                <span>Copy email</span>
+              </button>
+              <span class="contact__copy-note" id="copyEmailNote">Click to copy</span>
+            </div>
+            <p class="contact__meta">
+              <span id="contactLocation">Kunshan · China</span>
+              <span class="contact__meta-sep" aria-hidden="true">/</span>
+              <span>Open to music management</span>
+            </p>
+
+            <div class="contact__barcode" aria-hidden="true">
+              <span class="barcode"></span>
+              <span class="contact__barcode-label">SS—001 · KUNSHAN, CN</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__brand">SANYI SUN <span id="footerLegalName">Zoe Sun</span></p>
+      <p class="footer__note">Music Portfolio · 2026 / 27 · SS—001</p>
+      <a class="footer__top" href="#top">
+        Back to top
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+      </a>
+    </div>
+  </footer>
+
+  <!-- Player dock -->
+  <div class="player" id="player" aria-label="Audio player">
+    <div class="player__inner">
+      <div class="player__art" id="playerArt" aria-hidden="true">
+        <span class="player__eq"><i></i><i></i><i></i></span>
+      </div>
+
+      <div class="player__main">
+        <div class="player__text">
+          <p class="player__title" id="playerTitle">Select a track</p>
+          <p class="player__sub" id="playerSub">Zoe Sun · Music Portfolio</p>
+          <button class="player__lyrics" id="lyricsBtn" type="button" hidden>Lyrics</button>
+        </div>
+
+        <div class="player__timeline">
+          <span class="player__time" id="playerCurrent">0:00</span>
+          <div class="seek" id="seekBar" role="slider" tabindex="0"
+               aria-label="Seek" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+            <div class="seek__layer seek__layer--base" aria-hidden="true"></div>
+            <div class="seek__layer seek__layer--fill" aria-hidden="true"></div>
+            <span class="seek__handle" aria-hidden="true"></span>
+          </div>
+          <span class="player__time" id="playerDuration">0:00</span>
+        </div>
+      </div>
+
+      <div class="player__controls">
+        <div class="player__transport">
+          <button class="icon-btn" id="prevBtn" type="button" aria-label="Previous track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 6v12L9 12z" fill="currentColor" stroke="none"/><path d="M6 5v14"/></svg>
+          </button>
+          <button class="player__play" id="playBtn" type="button" aria-label="Play">
+            <svg class="i-play" viewBox="0 0 24 24" aria-hidden="true"><path d="M8 5.5v13l11-6.5z" fill="currentColor" stroke="none"/></svg>
+            <svg class="i-pause" viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5v14M15 5v14"/></svg>
+          </button>
+          <button class="icon-btn" id="nextBtn" type="button" aria-label="Next track">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6v12l9-6z" fill="currentColor" stroke="none"/><path d="M18 5v14"/></svg>
+          </button>
+        </div>
+
+        <div class="player__volume">
+          <button class="icon-btn icon-btn--sm" id="muteBtn" type="button" aria-label="Mute">
+            <svg class="i-vol" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16.5 8.5a5 5 0 0 1 0 7M19 6a8.5 8.5 0 0 1 0 12"/></svg>
+            <svg class="i-muted" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor" stroke="none"/><path d="M16 9l5 6M21 9l-5 6"/></svg>
+          </button>
+          <input class="volume" id="volume" type="range" min="0" max="100" value="75" aria-label="Volume" />
+        </div>
+      </div>
+    </div>
+    <audio id="audio" preload="metadata"></audio>
+    <p class="sr-only" id="playerStatus" aria-live="polite"></p>
+  </div>
+
+  <!-- Photo lightbox -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer" hidden>
+    <div class="lightbox__backdrop" data-close></div>
+    <div class="lightbox__top">
+      <p class="lightbox__counter" id="lightboxCounter">01 / 05</p>
+      <button class="lightbox__close" type="button" data-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <button class="lightbox__nav lightbox__nav--prev" id="lightboxPrev" type="button" aria-label="Previous photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 5l-7 7 7 7"/></svg>
+    </button>
+    <figure class="lightbox__figure">
+      <img id="lightboxImg" src="" alt="" />
+      <figcaption>
+        <span id="lightboxCaption"></span>
+      </figcaption>
+    </figure>
+    <button class="lightbox__nav lightbox__nav--next" id="lightboxNext" type="button" aria-label="Next photo">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7"/></svg>
+    </button>
+  </div>
+
+  <!-- Video modal -->
+  <div class="video-modal" id="videoModal" role="dialog" aria-modal="true" aria-label="Performance video" hidden>
+    <div class="video-modal__backdrop" data-video-close></div>
+    <div class="video-modal__top">
+      <p class="video-modal__label">Performance film</p>
+      <button class="lightbox__close" type="button" data-video-close aria-label="Close">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+      </button>
+    </div>
+    <figure class="video-modal__figure">
+      <div class="video-modal__frame" id="videoFrame">
+        <video id="videoPlayer" controls playsinline preload="metadata"></video>
+        <div class="video-modal__fallback" id="videoFallback" hidden>
+          <p>Video coming soon</p>
+          <span id="videoFallbackPath"></span>
+        </div>
+      </div>
+      <figcaption>
+        <span class="video-modal__title" id="videoTitle"></span>
+        <span class="video-modal__note" id="videoNote"></span>
+        <span class="video-modal__detail" id="videoDetail"></span>
+      </figcaption>
+    </figure>
+  </div>
+
+  <!-- Lyrics and notes -->
+  <div class="lyrics-modal" id="lyricsModal" role="dialog" aria-modal="true" aria-label="Lyrics and notes" hidden>
+    <div class="lyrics-modal__backdrop" data-lyrics-close></div>
+    <div class="lyrics-modal__panel">
+      <div class="lyrics-modal__top">
+        <p class="lyrics-modal__label">Lyrics &amp; notes</p>
+        <button class="lightbox__close" type="button" data-lyrics-close aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="lyrics-modal__scroll">
+        <header class="lyrics-modal__header">
+          <p class="lyrics-modal__eyebrow">English lyric · translated from Chinese</p>
+          <h3 class="lyrics-modal__title" id="lyricsTitle"></h3>
+        </header>
+        <div class="lyrics-modal__grid">
+          <div class="lyrics-modal__lyrics" id="lyricsBody"></div>
+          <aside class="lyrics-modal__notes">
+            <p class="lyrics-modal__notes-label">A note on the song</p>
+            <p class="lyrics-modal__note" id="lyricsNote"></p>
+            <p class="lyrics-modal__translation" id="lyricsTranslation"></p>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Case file modal -->
+  <div class="lyrics-modal case-modal" id="caseModal" role="dialog" aria-modal="true" aria-label="Case file" hidden>
+    <div class="lyrics-modal__backdrop" data-case-close></div>
+    <div class="lyrics-modal__panel">
+      <div class="lyrics-modal__top">
+        <p class="lyrics-modal__label" id="caseLabel">Case file</p>
+        <button class="lightbox__close" type="button" data-case-close aria-label="Close">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
+        </button>
+      </div>
+      <div class="lyrics-modal__scroll" id="caseBody"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
